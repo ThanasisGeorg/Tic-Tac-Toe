@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/tgeorg/Git_Repos/ThanasisGeorg/Cpp/Tic-Tac-Toe/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/TicTacToe.dir/src/main.cpp.o -c /home/tgeorg/Git_Repos/ThanasisGeorg/Cpp/Tic-Tac-Toe/src/main.cpp",
+  "file": "/home/tgeorg/Git_Repos/ThanasisGeorg/Cpp/Tic-Tac-Toe/src/main.cpp"
+},
+{
+  "directory": "/home/tgeorg/Git_Repos/ThanasisGeorg/Cpp/Tic-Tac-Toe/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/TicTacToe.dir/src/game_structure/board.cpp.o -c /home/tgeorg/Git_Repos/ThanasisGeorg/Cpp/Tic-Tac-Toe/src/game_structure/board.cpp",
+  "file": "/home/tgeorg/Git_Repos/ThanasisGeorg/Cpp/Tic-Tac-Toe/src/game_structure/board.cpp"
+}
+]
