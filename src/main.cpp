@@ -1,4 +1,4 @@
-#include "../Tic-Tac-Toe/game_structure/board.h"
+#include "./game_structure/board.h"
 
 int main(){
     Board *board = new Board();
