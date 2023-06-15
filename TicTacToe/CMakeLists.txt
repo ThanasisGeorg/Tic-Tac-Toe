@@ -11,5 +11,3 @@ set(SOURCES
 )
 
 add_executable(TicTacToe ${SOURCES})
-
-
