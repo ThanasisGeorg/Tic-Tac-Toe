@@ -10,4 +10,4 @@ set(SOURCES
     src/game_structure/board.cpp
 )
 
-add_executable(TicTacToe ${SOURCES})
+add_library(TicTacToe ${SOURCES})

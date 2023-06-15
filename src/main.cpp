@@ -1,6 +1,6 @@
 #include "./game_structure/board.h"
 
-int main(){
+int main() {
     Board *board = new Board();
 
     board->printBoard();
