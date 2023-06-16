@@ -8,9 +8,6 @@ class Board {
     public:
         string space[3][3] = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", " "}};
 
-        int row;
-        int column;
-
         Board(){};
         ~Board(){};
 
