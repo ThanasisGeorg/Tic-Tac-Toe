@@ -6,7 +6,8 @@ using namespace std;
 
 class Board {
     public:
-        char space[3][3] = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+        string space[3][3] = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", " "}};
+
         int row;
         int column;
 
