@@ -11,14 +11,14 @@ using namespace std;
 namespace Utils{
     struct Prompt{
         string message;
-        vector<int> accepted_input;
+        vector<string> accepted_input;
     };
 
     struct Response{
-        int input;
+        string input;
     };
 
-    bool prompt(string message, vector<int> accepted_input, Board *board, string turn_of);
+    bool prompt(string message, vector<string> accepted_input, Board *board, string turn_of);
 
     void println(string message);
     void print(string message);

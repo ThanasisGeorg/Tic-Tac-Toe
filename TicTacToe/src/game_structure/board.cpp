@@ -13,3 +13,17 @@ void Board::printBoard(){
     cout <<"  "<< space[2][0] <<"  |  "<< space[2][1] <<"  |  "<< space[2][2] <<"  \n";
     cout <<"     |     |     \n";
 }
+
+void Board::printHelpingBoard(){
+    cout <<"\n**Helping Board**\n";
+    cout <<"     |     |     \n";
+    cout <<"  a1 |  a2 |  a3 \n";
+    cout <<"_____|_____|_____\n";
+    cout <<"     |     |     \n";
+    cout <<"  b1 |  b2 |  b3 \n";
+    cout <<"_____|_____|_____\n";
+    cout <<"     |     |     \n";
+    cout <<"  c1 |  c2 |  c3 \n";
+    cout <<"     |     |     \n";
+    cout <<"*****************\n\n";
+}

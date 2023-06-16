@@ -12,4 +12,5 @@ class Board {
         ~Board(){};
 
         void printBoard();
+        void printHelpingBoard();
 };
