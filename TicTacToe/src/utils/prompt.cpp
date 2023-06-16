@@ -12,8 +12,9 @@ bool Utils::prompt(string message, vector<int> accepted_input, Board *board, str
         cin >> response.input;
         while(response.input != accepted_input.at(0) && response.input != accepted_input.at(1) && response.input != accepted_input.at(2) && response.input != accepted_input.at(3)
            && response.input != accepted_input.at(4) && response.input != accepted_input.at(5) && response.input != accepted_input.at(6) && response.input != accepted_input.at(7)
-           && response.input != accepted_input.at(8) && isdigit(response.input) == false){
+           && response.input != accepted_input.at(8)){
             println("Invalid input!");
+            response.input = 0;
             print(">");
             cin >> response.input;
         }

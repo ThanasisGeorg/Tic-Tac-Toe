@@ -19,6 +19,11 @@ void start(Board *board){
             flag = Utils::prompt("X's turn", prompt.accepted_input, board, "x");
         }
 
+        result = Game_Utils::check_result(board);
+        if(result == true){
+            break;
+        }
+
         flag = Utils::prompt("O's turn", prompt.accepted_input, board, "o");
         while(!flag){
             flag = Utils::prompt("O's turn", prompt.accepted_input, board, "o");
