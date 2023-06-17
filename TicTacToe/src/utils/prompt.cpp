@@ -1,6 +1,5 @@
-#include <stdlib.h>
-
 #include "prompt.h"
+#include "../../Ansi-Text-Manipulation-Library/AnsiTextLibrary/src/ansi_lib.hpp"
 
 using namespace Utils;
 
@@ -22,47 +21,47 @@ bool Utils::prompt(string message, vector<string> accepted_input, Board *board, 
 
         if(response.input == accepted_input.at(0) && board->space[0][0] == " "){
             board->space[0][0] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(1) && board->space[0][1] == " "){
             board->space[0][1] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(2) && board->space[0][2] == " "){
             board->space[0][2] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(3) && board->space[1][0] == " "){
             board->space[1][0] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(4) && board->space[1][1] == " "){
             board->space[1][1] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(5) && board->space[1][2] == " "){
             board->space[1][2] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(6) && board->space[2][0] == " "){
             board->space[2][0] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(7) && board->space[2][1] == " "){
             board->space[2][1] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(8) && board->space[2][2] == " "){
             board->space[2][2] = "x";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else {
@@ -85,47 +84,47 @@ bool Utils::prompt(string message, vector<string> accepted_input, Board *board, 
 
         if(response.input == accepted_input.at(0) && board->space[0][0] == " "){
             board->space[0][0] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(1) && board->space[0][1] == " "){
             board->space[0][1] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(2) && board->space[0][2] == " "){
             board->space[0][2] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(3) && board->space[1][0] == " "){
             board->space[1][0] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(4) && board->space[1][1] == " "){
             board->space[1][1] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(5) && board->space[1][2] == " "){
             board->space[1][2] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(6) && board->space[2][0] == " "){
             board->space[2][0] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(7) && board->space[2][1] == " "){
             board->space[2][1] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else if(response.input == accepted_input.at(8) && board->space[2][2] == " "){
             board->space[2][2] = "o";
-            system("clear");
+            AnsiTextLib::Text::clearScreen();
             board->printBoard();
             return true;
         } else {
