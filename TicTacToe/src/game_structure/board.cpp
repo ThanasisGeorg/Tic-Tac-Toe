@@ -11,11 +11,12 @@ void Board::printBoard(){
     cout <<"_____|_____|_____\n";
     cout <<"     |     |     \n";
     cout <<"  "<< space[2][0] <<"  |  "<< space[2][1] <<"  |  "<< space[2][2] <<"  \n";
-    cout <<"     |     |     \n";
+    cout <<"     |     |     \n\n";
 }
 
 void Board::printHelpingBoard(){
-    cout <<"\n**Helping Board**\n";
+    cout <<"\n  Helping Board  \n";
+    cout <<"*****************\n";
     cout <<"     |     |     \n";
     cout <<"  a1 |  a2 |  a3 \n";
     cout <<"_____|_____|_____\n";
