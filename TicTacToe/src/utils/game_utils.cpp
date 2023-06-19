@@ -1,6 +1,13 @@
 #include "game_utils.h"
-
 #include "../../Ansi-Text-Manipulation-Library/AnsiTextLibrary/src/ansi_lib.hpp"
+
+#include <stdlib.h>
+
+#ifdef _WIN32
+    #include <windows.h>
+#else
+    #include <unistd.h>
+#endif
 
 using namespace Game_Utils;
 using namespace Utils;
@@ -62,8 +69,6 @@ bool Game_Utils::check_result(Board *board){
 }
 
 bool Game_Utils::turn(string message, Response response, vector<string> accepted_input, Board *board, string turn_of){
-    //int input;
-
     println(message);
     print("> ");
     
@@ -71,12 +76,18 @@ bool Game_Utils::turn(string message, Response response, vector<string> accepted
     while(response.input != accepted_input.at(0) && response.input != accepted_input.at(1) && response.input != accepted_input.at(2) && response.input != accepted_input.at(3)
         && response.input != accepted_input.at(4) && response.input != accepted_input.at(5) && response.input != accepted_input.at(6) && response.input != accepted_input.at(7)
         && response.input != accepted_input.at(8)){
-        println("Invalid input!");
+        println("***Invalid Input***");
+        #ifdef _WIN32
+            /**/
+        #else
+            sleep(1);
+        #endif
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        println(message);
         print("> ");
         getline(cin, response.input);
     }
-    
-    //input = stoi(response.input);
 
     if(response.input == accepted_input.at(0) && board->space[0][0] == " "){
         board->space[0][0] = turn_of;
@@ -124,7 +135,14 @@ bool Game_Utils::turn(string message, Response response, vector<string> accepted
         board->printBoard();
         return true;
     }
-    
-    println("You cant do that here!");
+
+    println("***You can't do that here***");
+    #ifdef _WIN32
+            /**/
+    #else
+        sleep(1);
+    #endif
+    AnsiTextLib::Text::clearScreen();
+    board->printBoard();
     return false;
 }
