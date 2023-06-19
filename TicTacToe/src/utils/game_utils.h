@@ -8,6 +8,7 @@
 #include <string>
 
 using namespace Utils;
+using namespace std;
 
 namespace Game_Utils{
     bool check_result(Board *board);

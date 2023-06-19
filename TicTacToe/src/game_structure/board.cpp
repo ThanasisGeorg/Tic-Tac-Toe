@@ -18,13 +18,13 @@ void Board::printHelpingBoard(){
     cout <<"\n  Helping Board  \n";
     cout <<"*****************\n";
     cout <<"     |     |     \n";
-    cout <<"  a1 |  a2 |  a3 \n";
+    cout <<"  1  |  2  |  3  \n";
     cout <<"_____|_____|_____\n";
     cout <<"     |     |     \n";
-    cout <<"  b1 |  b2 |  b3 \n";
+    cout <<"  4  |  5  |  6  \n";
     cout <<"_____|_____|_____\n";
     cout <<"     |     |     \n";
-    cout <<"  c1 |  c2 |  c3 \n";
+    cout <<"  7  |  8  |  9  \n";
     cout <<"     |     |     \n";
     cout <<"*****************\n\n";
 }

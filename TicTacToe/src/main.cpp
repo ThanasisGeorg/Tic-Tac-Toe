@@ -1,5 +1,4 @@
 #include "./game_structure/board.h"
-#include "./utils/prompt.h"
 #include "./utils/game_utils.h"
 
 using namespace Utils;
@@ -7,11 +6,11 @@ using namespace Game_Utils;
 
 void start(Board *board){
     Prompt prompt;
-    prompt.accepted_input = {"a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"};
+    prompt.accepted_input = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
     bool flag = false, result;
 
-    board->printHelpingBoard();
+    //board->printHelpingBoard();
 
     board->printBoard();
 

@@ -62,6 +62,8 @@ bool Game_Utils::check_result(Board *board){
 }
 
 bool Game_Utils::turn(string message, Response response, vector<string> accepted_input, Board *board, string turn_of){
+    //int input;
+
     println(message);
     print("> ");
     
@@ -73,6 +75,8 @@ bool Game_Utils::turn(string message, Response response, vector<string> accepted
         print("> ");
         getline(cin, response.input);
     }
+    
+    //input = stoi(response.input);
 
     if(response.input == accepted_input.at(0) && board->space[0][0] == " "){
         board->space[0][0] = turn_of;
