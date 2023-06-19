@@ -72,14 +72,14 @@ bool Game_Utils::check_result(Board *board){
     } else return false;
 }
 
-bool Game_Utils::turn(string message, Response response, vector<string> accepted_input, Board *board, string turn_of){
+bool Game_Utils::turn(string message, Response response, vector<string> accepted_moves, Board *board, string turn_of){
     println(message);
     print("> ");
     
     getline(cin, response.input);
-    while(response.input != accepted_input.at(0) && response.input != accepted_input.at(1) && response.input != accepted_input.at(2) && response.input != accepted_input.at(3)
-        && response.input != accepted_input.at(4) && response.input != accepted_input.at(5) && response.input != accepted_input.at(6) && response.input != accepted_input.at(7)
-        && response.input != accepted_input.at(8)){
+    while(response.input != accepted_moves.at(0) && response.input != accepted_moves.at(1) && response.input != accepted_moves.at(2) && response.input != accepted_moves.at(3)
+        && response.input != accepted_moves.at(4) && response.input != accepted_moves.at(5) && response.input != accepted_moves.at(6) && response.input != accepted_moves.at(7)
+        && response.input != accepted_moves.at(8)){
         println("***Invalid Input***");
         #ifdef _WIN32
             std::this_thread::sleep_for(chrono::seconds(1));
@@ -93,47 +93,47 @@ bool Game_Utils::turn(string message, Response response, vector<string> accepted
         getline(cin, response.input);
     }
 
-    if(response.input == accepted_input.at(0) && board->space[0][0] == " "){
+    if(response.input == accepted_moves.at(0) && board->space[0][0] == " "){
         board->space[0][0] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
         return true;
-    } else if(response.input == accepted_input.at(1) && board->space[0][1] == " "){
+    } else if(response.input == accepted_moves.at(1) && board->space[0][1] == " "){
         board->space[0][1] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
         return true;
-    } else if(response.input == accepted_input.at(2) && board->space[0][2] == " "){
+    } else if(response.input == accepted_moves.at(2) && board->space[0][2] == " "){
         board->space[0][2] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
         return true;
-    } else if(response.input == accepted_input.at(3) && board->space[1][0] == " "){
+    } else if(response.input == accepted_moves.at(3) && board->space[1][0] == " "){
         board->space[1][0] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
         return true;
-    } else if(response.input == accepted_input.at(4) && board->space[1][1] == " "){
+    } else if(response.input == accepted_moves.at(4) && board->space[1][1] == " "){
         board->space[1][1] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
         return true;
-    } else if(response.input == accepted_input.at(5) && board->space[1][2] == " "){
+    } else if(response.input == accepted_moves.at(5) && board->space[1][2] == " "){
         board->space[1][2] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
         return true;
-    } else if(response.input == accepted_input.at(6) && board->space[2][0] == " "){
+    } else if(response.input == accepted_moves.at(6) && board->space[2][0] == " "){
         board->space[2][0] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
         return true;
-    } else if(response.input == accepted_input.at(7) && board->space[2][1] == " "){
+    } else if(response.input == accepted_moves.at(7) && board->space[2][1] == " "){
         board->space[2][1] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
         return true;
-    } else if(response.input == accepted_input.at(8) && board->space[2][2] == " "){
+    } else if(response.input == accepted_moves.at(8) && board->space[2][2] == " "){
         board->space[2][2] = turn_of;
         AnsiTextLib::Text::clearScreen();
         board->printBoard();
@@ -142,11 +142,62 @@ bool Game_Utils::turn(string message, Response response, vector<string> accepted
 
     println("***You can't do that here***");
     #ifdef _WIN32
-        std::this_thread::sleep_for(chrono::seconds(1));
+        std::this_thread::sleep_for(chrono::seconds(1));moves
     #else
         sleep(1);
     #endif
     AnsiTextLib::Text::clearScreen();
     board->printBoard();
+    return false;
+}
+
+bool Game_Utils::move_to(int cell_num, vector<string> accepted_moves, Board *board, string turn_of){
+    if(to_string(cell_num) == accepted_moves.at(0) && board->space[0][0] == " "){
+        board->space[0][0] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    } else if(to_string(cell_num) == accepted_moves.at(1) && board->space[0][1] == " "){
+        board->space[0][1] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    } else if(to_string(cell_num) == accepted_moves.at(2) && board->space[0][2] == " "){
+        board->space[0][2] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    } else if(to_string(cell_num) == accepted_moves.at(3) && board->space[1][0] == " "){
+        board->space[1][0] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    } else if(to_string(cell_num) == accepted_moves.at(4) && board->space[1][1] == " "){
+        board->space[1][1] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    } else if(to_string(cell_num) == accepted_moves.at(5) && board->space[1][2] == " "){
+        board->space[1][2] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    } else if(to_string(cell_num) == accepted_moves.at(6) && board->space[2][0] == " "){
+        board->space[2][0] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    } else if(to_string(cell_num) == accepted_moves.at(7) && board->space[2][1] == " "){
+        board->space[2][1] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    } else if(to_string(cell_num) == accepted_moves.at(8) && board->space[2][2] == " "){
+        board->space[2][2] = turn_of;
+        AnsiTextLib::Text::clearScreen();
+        board->printBoard();
+        return true;
+    }
+
     return false;
 }

@@ -6,7 +6,7 @@ using namespace Game_Utils;
 
 void start(Board *board){
     Prompt prompt;
-    prompt.accepted_input = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    prompt.accepted_moves = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
     bool flag = false, result;
 
@@ -15,9 +15,9 @@ void start(Board *board){
     board->printBoard();
 
     do{
-        flag = Utils::prompt("X's turn", prompt.accepted_input, board, "x");
+        flag = Utils::prompt("X's turn", prompt.accepted_moves, board, "x");
         while(!flag){
-            flag = Utils::prompt("X's turn", prompt.accepted_input, board, "x");
+            flag = Utils::prompt("X's turn", prompt.accepted_moves, board, "x");
         }
 
         result = Game_Utils::check_result(board);
@@ -25,9 +25,9 @@ void start(Board *board){
             break;
         }
 
-        flag = Utils::prompt("O's turn", prompt.accepted_input, board, "o");
+        flag = Utils::prompt("O's turn", prompt.accepted_moves, board, "o");
         while(!flag){
-            flag = Utils::prompt("O's turn", prompt.accepted_input, board, "o");
+            flag = Utils::prompt("O's turn", prompt.accepted_moves, board, "o");
         }
 
         result = Game_Utils::check_result(board);

@@ -13,4 +13,5 @@ using namespace std;
 namespace Game_Utils{
     bool check_result(Board *board);
     bool turn(string message, Response response, vector<string> accepted_input, Board *board, string turn_of);
+    bool move_to(int cell_num, vector<string> accepted_moves, Board *board, string turn_of);
 };
