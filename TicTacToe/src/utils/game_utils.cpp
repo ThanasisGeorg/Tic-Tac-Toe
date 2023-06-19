@@ -5,6 +5,10 @@
 
 #ifdef _WIN32
     #include <windows.h>
+    #include <thread>
+    #include <chrono>
+
+    using namespace std;
 #else
     #include <unistd.h>
 #endif
@@ -78,7 +82,7 @@ bool Game_Utils::turn(string message, Response response, vector<string> accepted
         && response.input != accepted_input.at(8)){
         println("***Invalid Input***");
         #ifdef _WIN32
-            /**/
+            std::this_thread::sleep_for(chrono::seconds(1));
         #else
             sleep(1);
         #endif
@@ -138,7 +142,7 @@ bool Game_Utils::turn(string message, Response response, vector<string> accepted
 
     println("***You can't do that here***");
     #ifdef _WIN32
-            /**/
+        std::this_thread::sleep_for(chrono::seconds(1));
     #else
         sleep(1);
     #endif
