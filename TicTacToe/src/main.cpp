@@ -20,7 +20,7 @@ void start(Board *board){
             flag = Utils::prompt("X's turn", prompt.accepted_moves, board, "x");
         }
 
-        result = Game_Utils::check_result(board);
+        result = Game_Utils::checkResult(board);
         if(result == true){
             break;
         }
@@ -30,7 +30,7 @@ void start(Board *board){
             flag = Utils::prompt("O's turn", prompt.accepted_moves, board, "o");
         }
 
-        result = Game_Utils::check_result(board);
+        result = Game_Utils::checkResult(board);
     } while(!result);
 
 }

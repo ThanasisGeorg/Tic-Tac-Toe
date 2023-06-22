@@ -15,6 +15,9 @@ set(SOURCES
     src/utils/prompt.cpp
     src/utils/game_utils.h
     src/utils/game_utils.cpp
+
+    src/Bot/bot.h
+    src/Bot/bot.cpp
 )
 
 add_executable(TicTacToe ${SOURCES})
