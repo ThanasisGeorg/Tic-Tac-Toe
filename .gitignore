@@ -49,12 +49,12 @@ _deps
 *-prefix/
 
 ### VisualStudioCode ###
-/TicTacToe/.vscode/*
-/TicTacToe/.vscode/settings.json
-/TicTacToe/.vscode/tasks.json
-/TicTacToe/.vscode/launch.json
-/TicTacToe/.vscode/extensions.json
-/TicTacToe/.vscode/*.code-snippets
+.vscode/*
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.code-snippets
 
 /TicTacToe/build/
 ./build
