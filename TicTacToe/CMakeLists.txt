@@ -18,6 +18,9 @@ set(SOURCES
 
     src/Bot/bot.h
     src/Bot/bot.cpp
+
+    src/menu/menu.h
+    src/menu/menu.cpp
 )
 
 add_executable(TicTacToe ${SOURCES})
